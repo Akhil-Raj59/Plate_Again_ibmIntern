@@ -40,6 +40,23 @@
       }
     }
     }
+    /* card */
+    .card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-container {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover .image-container {
+            transform: scale(1.1);
+        }
   </style>
 
 </head>
@@ -271,8 +288,8 @@
     </div>
   </section>
 
-  <!-- Footer -->
-<footer class="bg-[#212121] text-white py-8">
+ <!-- Footer -->
+ <footer class="bg-[#212121] text-white py-8">
   <div class="container mx-auto px-4">
     <div class="flex flex-col md:flex-row justify-around items-center md:items-start">
       <div class="mb-8 md:mb-0 text-center md:text-left">
@@ -324,11 +341,41 @@
         </div>
       </div>
     </div>
-    <div class="mt-8 text-center border-t border-gray-700 pt-4">
+
+    <!-- Card Section -->
+    <div class="flex flex-wrap justify-center gap-8 mt-8">
+      <!-- Card 1 -->
+      <div class="card bg-black rounded-lg overflow-hidden shadow-lg w-80 p-6 transform transition duration-300 ease-in-out">
+          <div class="flex flex-col justify-center items-center gap-4">
+              <div class="image-container w-40 h-40 rounded-full overflow-hidden">
+                  <img src="#" alt="Profile Image" class="w-full h-full object-cover" loading="lazy">
+              </div>
+              <h2 class="text-lg font-bold">Akhil Raj</h2>
+              <h2 class="text-md text-gray-300 font-bold font-oswald">CSE Student</h2>
+              <p class="text-md text-gray-300">+91 9717411628</p>
+              <p class="text-sm text-gray-400 mt-4">follow link</p>
+          </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card bg-black rounded-lg overflow-hidden shadow-lg w-80 p-6 transform transition duration-300 ease-in-out">
+          <div class="flex flex-col justify-center items-center gap-4">
+              <div class="image-container w-40 h-40 rounded-full overflow-hidden">
+                  <img src="#" alt="Profile Image" class="w-full h-full object-cover"  loading="lazy">
+              </div>
+              <h2 class="text-lg font-bold">Aakash Pal</h2>
+              <h2 class="text-md text-gray-300 font-bold font-oswald">CSE Student</h2>
+              <p class="text-md text-gray-300">+91 9798 baki gaand me</p>
+              <p class="text-sm text-gray-400 mt-4">follow links</p>
+          </div>
+      </div>
+  </div>
+
+  <div class="mt-8 text-center border-t border-gray-700 pt-4">
       <p class="text-gray-400">Designed And Developed by Akhil Raj And Aakash Pal</p>
       <p class="text-gray-400">&copy; 2024 Plate Again. All rights reserved.</p>
     </div>
-  </div>
+</div>
 </footer>
 
   <script>
