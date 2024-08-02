@@ -15,7 +15,7 @@
       height: 5rem;
       white-space: nowrap; 
       border-right: 1px solid;
-      animation: typing 4s steps(16, end) infinite;
+      animation: typing 5s steps(16, end) infinite;
     }
 
     @keyframes typing {
@@ -25,6 +25,20 @@
       to { 
         width: 40%; 
       }
+    }
+    @media screen and (max-width:400px) {
+      #heading{
+        animation: typing 6s steps(16, end) infinite;
+        height: 3rem;
+      }
+      @keyframes typing {
+      from { 
+        width: 0; 
+      }
+      to { 
+        width: 110%; 
+      }
+    }
     }
   </style>
 
@@ -83,7 +97,7 @@
     <a href="#" class="p-2 hover:text-yellow-300">
       <div class="flex flex-col items-center">
         <i class="fa-solid fa-circle-user text-3xl"></i>
-        <p id="user-name" class="text-lg font-sans"></p>
+        <p id="user-name-for-mobile" class="text-lg font-sans"></p>
       </div>
     </a>
   </div>
@@ -323,10 +337,13 @@
   
   menuButton.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
+    // mobileMenu.style.display = 'flex';
   });
     const names = JSON.parse(localStorage.getItem('names')) || [];
     
     let userName = document.getElementById('user-name');
+    let userNameForMobile = document.getElementById('user-name-for-mobile');
+    userNameForMobile.textContent = names[names.length - 1];
     userName.textContent = names[names.length - 1];
   </script>
 
